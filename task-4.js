@@ -27,7 +27,7 @@ else {
         alert('Недостаточно средств на счету!');
     }
     else {
-        credits += - totalPrice;
+        credits -= totalPrice;
         console.log(`Вы купили ${qtDroid} дроида(ов), на счету осталось ${credits} кредитов`);
         alert(`Вы купили ${qtDroid} дроида(ов), на счету осталось ${credits} кредитов`);
     }
