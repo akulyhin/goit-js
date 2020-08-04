@@ -12,14 +12,20 @@ const products = [
     for (let el of arr) {
         const keys = Object.keys(el);
 
-        const values = Object.values(el);
-
-        for (let elem of keys) {
-            if (elem === prop) {
-                let currentKey = elem;
-                result.push(el[currentKey]);
-            }
+        // New solution
+        if (el[prop] !== undefined) {
+            result.push(el[prop]);
         }
+
+        // Old Solution
+        
+        // for (let elem of keys) {
+        //     if (elem === prop) {
+        //         let currentKey = elem;
+        //         result.push(el[currentKey]);
+        //     }
+        // }
+
     }
     return result;
   };

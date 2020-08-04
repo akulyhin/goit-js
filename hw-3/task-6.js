@@ -10,10 +10,9 @@ const products = [
     let total;
     
     for (let el of allProducts) {
-        const values = Object.values(el);
 
-      if (values[0] === productName) {
-        total = values[1] * values[2];
+      if (el.name === productName) {
+        total = el.price * el.quantity;
       }
     }
     return total;
