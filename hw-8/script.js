@@ -9,6 +9,7 @@ const refs = {
 }
 
     refs.gallery.addEventListener('click', (event) => {
+        event.preventDefault();
         if (event.target.nodeName === "IMG") {
             refs.modal.classList.add('is-open');
             console.dir(event.target);
@@ -35,7 +36,7 @@ img.alt = element.description;
 
 const link = document.createElement('a');
 link.classList.add('gallery__link');
-// link.href = element.original;
+link.href = element.original;
 link.append(img);
 
 const li = document.createElement('li');
