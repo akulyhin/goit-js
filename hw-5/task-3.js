@@ -2,21 +2,24 @@ class Storage  {
     constructor(array) {
         this.items = array;
     }
-
+ 
     getItems() {
-        console.log(this.items);
-    };
+        return this.items;
+      }
 
-    addItem(item) {
-        return this.items.push(item);
-    };
 
-    removeItem(item) {
-        if (this.items.indexOf(item) !== -1) {
-           return this.items.splice(this.items.indexOf(item), 1);
+      addItem(item) {
+        this.items.push(item);
+      }
+      removeItem(item) {
+        let ind = this.items.findIndex((obj) => {
+          return obj === item;
+        });
+        if (ind !== -1) {
+          this.items.splice(ind, 1);
         }
-    };
-}
+      }
+    }
 
 const storage = new Storage([
     'Нанитоиды',
