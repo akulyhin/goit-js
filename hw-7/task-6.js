@@ -3,7 +3,8 @@ const validRef = document.querySelector('#validation-input');
 validRef.addEventListener('change', event => {
     const dataLength = event.target.value.length;
     // console.log(dataLength);
-    if (dataLength === 6) {
+
+    if (dataLength === +validRef.getAttribute("data-length")) {
         validRef.classList.add('valid');
         validRef.classList.remove('invalid');
     }

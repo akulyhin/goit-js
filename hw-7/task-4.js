@@ -3,14 +3,14 @@ const increment = document.querySelector('[data-action="increment"]');
 
 const value = document.querySelector('#value');
 
-let counterValue = +value.textContent;
+let counterValue = +value.value;
 
 decrement.addEventListener('click', () => {
     counterValue -= 1;
-    value.textContent = counterValue;
+    value.value = counterValue;
 })
 
 increment.addEventListener('click', () => {
     counterValue += 1;
-    value.textContent = counterValue;
+    value.value = counterValue;
 })

@@ -9,3 +9,5 @@ inputRef.addEventListener('input', event => {
     }
         nameRef.textContent = 'незнакомец'
 })
+
+
